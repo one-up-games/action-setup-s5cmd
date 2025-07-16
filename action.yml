@@ -70,7 +70,7 @@ runs:
         esac
 
         asset_name="s5cmd_${version}_${os}-${arch}${extension}"
-        asset_url="https://github.com/peak/s5cmd/releases/download/v${version}_/${asset_name}"
+        asset_url="https://github.com/peak/s5cmd/releases/download/v${version}/${asset_name}"
 
         echo "::group::Asset URL"
         echo "${asset_url}"
