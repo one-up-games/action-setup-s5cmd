@@ -70,10 +70,7 @@ runs:
         esac
 
         asset_name="s5cmd_${version}_${os}-${arch}${extension}"
-        asset_url=$(
-            curl -s https://api.github.com/repos/peak/s5cmd/releases |
-                jq --arg tag "${tag}" --arg asset_name "${asset_name}" '.[]| select(.tag_name==$tag) | .assets[].browser_download_url | select(. | test(".+" + $asset_name + "$"))' | xargs
-        )
+        asset_url="https://github.com/peak/s5cmd/releases/download/${asset_name}"
 
         echo "::group::Asset URL"
         echo "${asset_url}"
